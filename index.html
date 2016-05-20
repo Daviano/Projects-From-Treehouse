@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv = "content-type" content = "text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <!-- LINK PANTALLA MODAL CSS -->
+    <link rel="stylesheet" href="jquery.fancybox.css?v=2.1.5"/>
+    <!-- LINKS PANTALLA MODAL JAVASCRIPT & GOOGLEAPI-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type = "text/javascript" src = "jquery.fancybox.js?v=2.1.5"></script>
+    <!-- SCRIPT PANTALLA MODAL JQUERY -->
+    <script> 
+        // UTILIZAR class = "panelz_im" PARA LLAMAR ESTA FUNCIÓN Y PONER UNA IMAGEN
+        $(document).on('click', '.panelz_im', function(e){
+            e.preventDefault();
+            $.fancybox({
+                href : $(this).attr('href'),
+                type : 'image'
+            });
+        });
+        // UTILIZAR class = "panelz_if" PARA LLAMAR ESTA FUNCIÓN Y PONER UN HTML
+        $(document).on('click', '.panelz_if', function(e){
+            e.preventDefault();
+            $.fancybox({
+                href : $(this).attr('href'),
+                type : 'iframe'
+            });
+        });
+    </script> 
+    <title>Postresitos</title>
+  </head>
+  
+  <body>
+    <div class="header">
+      <h1>POSTRESITOS</h1>
+      <h4>El postre que quieras, de la repostería que quieras, ¡a donde quieras!<h4>
+    </div>
+
+    
+    <div class="nav">
+      <div class="container">
+      	<ul>
+        	<li style = "font-family: Cursive; text-align: center;">Selecciona una marca y elige un producto... ¡Nosotros te lo llevemos a domicilio!</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class = "col-md-4">
+          <a href = "http://www.casaflanke.com" class = "panelz_if"><img class = "img-responsive"src = "img/flanke.jpg"/></a>
+        </div> 
+        <div class = "col-md-4">
+          <img class = "img-responsive"src = "img/fresas.jpg"/>
+        </div>
+        <div class = "col-md-4">
+          <img class = "img-responsive"src = "img/fresas.jpg"/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class = "col-md-4">
+          <img class = "img-responsive"src = "img/fresas.jpg"/>
+        </div>
+        <div class = "col-md-4">
+          <img class = "img-responsive"src = "img/fresas.jpg"/>
+        </div>
+        <div class = "col-md-4">
+          <img class = "img-responsive"src = "img/fresas.jpg"/>
+        </div>
+      </div>
+    </div>
+	<div class = "footer">
+    <p>TODOS LOS DERECHOS RESERVADOS &copy;</p>
+  </div>
+    
+
+  </body>
+</html>
