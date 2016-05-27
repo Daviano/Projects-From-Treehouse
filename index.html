@@ -8,28 +8,7 @@
     <link href='style.css' rel='stylesheet' type='text/css'>
     <!-- LINK PANTALLA MODAL CSS -->
     <link rel="stylesheet" href="jquery.fancybox.css?v=2.1.5"/>
-    <!-- LINKS PANTALLA MODAL JAVASCRIPT & GOOGLEAPI-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type = "text/javascript" src = "jquery.fancybox.js?v=2.1.5"></script>
-    <!-- SCRIPT PANTALLA MODAL JQUERYYY -->
-    <script> 
-        // UTILIZAR class = "panelz_im" PARA LLAMAR ESTA FUNCIÓN Y PONER UNA IMAGEN
-        $(document).on('click', '.panelz_im', function(e){
-            e.preventDefault();
-            $.fancybox({
-                href : $(this).attr('href'),
-                type : 'image'
-            });
-        });
-        // UTILIZAR class = "panelz_if" PARA LLAMAR ESTA FUNCIÓN Y PONER UN HTML
-        $(document).on('click', '.panelz_if', function(e){
-            e.preventDefault();
-            $.fancybox({
-                href : $(this).attr('href'),
-                type : 'iframe'
-            });
-        });
-    </script> 
+
     <title>Postresitos</title>
   </head>
   
@@ -76,7 +55,28 @@
 	<div class = "footer">
     <p>TODOS LOS DERECHOS RESERVADOS &copy;</p>
   </div>
-    
-
+  
+  <!-- LINKS PANTALLA MODAL JAVASCRIPT & GOOGLEAPI-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type = "text/javascript" src = "jquery.fancybox.js?v=2.1.5"></script>
+    <!-- SCRIPT PANTALLA MODAL JQUERY -->
+    <script> 
+        // UTILIZAR class = "panelz_im" PARA LLAMAR ESTA FUNCIÓN Y PONER UNA IMAGEN
+        $(document).on('click', '.panelz_im', function(e){
+            e.preventDefault();
+            $.fancybox({
+                href : $(this).attr('href'),
+                type : 'image'
+            });
+        });
+        // UTILIZAR class = "panelz_if" PARA LLAMAR ESTA FUNCIÓN Y PONER UN HTML
+        $(document).on('click', '.panelz_if', function(e){
+            e.preventDefault();
+            $.fancybox({
+                href : $(this).attr('href'),
+                type : 'iframe'
+            });
+        });
+    </script>
   </body>
 </html>
